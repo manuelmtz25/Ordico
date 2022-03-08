@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ordico.Promos.BLL\Ordico.Promos.BLL.csproj" />
+    <ProjectReference Include="..\Ordico.Promos.DAL\Ordico.Promos.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
