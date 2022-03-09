@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ordico.Promos.DAL\Ordico.Promos.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

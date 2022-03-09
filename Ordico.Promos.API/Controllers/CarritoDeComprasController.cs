@@ -1,4 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic.CompilerServices;
+using Ordico.Promos.BLL;
+using Ordico.Promos.DAL.Entidades;
+using Ordico.Promos.DAL.Mocks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,35 +10,37 @@ namespace Ordico.Promos.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Promociones : ControllerBase
+    public class CarritoDeComprasController : ControllerBase
     {
-        // GET: api/<CarritoMock>
+        // GET: api/<CarritoDeComprasController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public CarritoDeCompras Get()
         {
-            return new string[] { "value1", "value2" };
+            var obj = new CarritoMock();
+            var carrito=obj.ObtenerCarritoMock();
+            return carrito;
         }
 
-        // GET api/<CarritoMock>/5
+        // GET api/<CarritoDeComprasController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<CarritoMock>
+        // POST api/<CarritoDeComprasController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<CarritoMock>/5
+        // PUT api/<CarritoDeComprasController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<CarritoMock>/5
+        // DELETE api/<CarritoDeComprasController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

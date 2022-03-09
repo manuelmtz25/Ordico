@@ -2,9 +2,10 @@
 
 namespace Ordico.Promos.DAL.Mocks
 {
-    public class Carrito
+    public class CarritoMock
     {
-        public Carrito()
+        public CarritoDeCompras carritoMock=null;
+        public CarritoMock()
         {
             var carritoDeCompras = new CarritoDeCompras();
             carritoDeCompras.MomentoDeCompra=DateTime.Now;
@@ -15,7 +16,15 @@ namespace Ordico.Promos.DAL.Mocks
                 new Item() { Cantidad = 1, Descipcion = "Papel", GrupoAlQuePertenece = Catalogo.GrupoProductos.Abarrotes, PrecioUnitario = 10, SKU = "ABC01" },
                 new Item() { Cantidad = 4, Descipcion = "Jugo", GrupoAlQuePertenece = Catalogo.GrupoProductos.Salud, PrecioUnitario = 10, SKU = "ABC01" },
             };
+            carritoDeCompras.ListaDeProductos = listaCompras;
             carritoDeCompras.TotalDeCompra = 5000;
+
+            carritoMock = carritoDeCompras;
+        }
+
+        public CarritoDeCompras ObtenerCarritoMock()
+        {
+            return carritoMock;
         }
     }
 }
