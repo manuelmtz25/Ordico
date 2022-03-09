@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Ordico.Promos.DAL.Mocks;
 
 namespace Ordico.Promos.Tests
 {
@@ -6,8 +7,11 @@ namespace Ordico.Promos.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void EvaluacionInicialCarritoDeCompras()
         {
+            var carrito = new CarritoMock();
+            Assert.IsNotNull(carrito);
+            
         }
     }
 }
